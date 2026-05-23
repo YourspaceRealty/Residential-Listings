@@ -482,6 +482,24 @@ h3 {
   background: var(--sage);
 }
 
+.google-profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  background: var(--forest);
+  color: var(--white);
+}
+
+.google-profile-section > div {
+  max-width: 760px;
+}
+
+.google-profile-section p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.08rem;
+}
+
 .area-list {
   display: flex;
   flex-wrap: wrap;
@@ -848,6 +866,11 @@ textarea {
 
   .value-section {
     align-items: start;
+    flex-direction: column;
+  }
+
+  .google-profile-section {
+    align-items: flex-start;
     flex-direction: column;
   }
 }
