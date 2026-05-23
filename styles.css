@@ -147,6 +147,54 @@ a {
   max-width: 940px;
 }
 
+.realtor-hero-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+  align-items: end;
+  gap: clamp(28px, 5vw, 64px);
+  max-width: 1180px;
+}
+
+.profile-card {
+  overflow: hidden;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.profile-card > img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.profile-card > div {
+  display: grid;
+  gap: 8px;
+  padding: 20px;
+}
+
+.profile-card strong,
+.profile-card a {
+  color: var(--forest);
+  font-weight: 800;
+}
+
+.profile-card a {
+  text-decoration: none;
+}
+
+.profile-card span {
+  color: var(--muted);
+}
+
+.broker-logo {
+  width: 170px;
+  height: auto;
+  margin-bottom: 4px;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
@@ -332,7 +380,8 @@ h3 {
 .gallery-section,
 .overview-section,
 .about-section,
-.contact-section {
+.contact-section,
+.strengths-section {
   background: var(--white);
 }
 
@@ -386,7 +435,9 @@ h3 {
 .empty-state p,
 .about-section > p,
 .overview-section > p,
-.contact-copy p:not(.eyebrow) {
+.contact-copy p:not(.eyebrow),
+.strength-grid p,
+.mini-listing-card p {
   color: var(--muted);
 }
 
@@ -406,6 +457,68 @@ h3 {
 
 .featured-section {
   padding-top: 0;
+}
+
+.strength-grid,
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.strength-grid article,
+.mini-listing-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 14px 42px rgba(24, 32, 27, 0.06);
+}
+
+.strength-grid article {
+  padding: 26px;
+}
+
+.service-area-section {
+  background: var(--sage);
+}
+
+.area-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.area-list span {
+  padding: 10px 14px;
+  color: var(--forest);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-weight: 800;
+}
+
+.featured-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.mini-listing-card {
+  overflow: hidden;
+}
+
+.mini-listing-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.mini-listing-card > div {
+  padding: 22px;
+}
+
+.mini-listing-card a {
+  color: var(--clay);
+  font-weight: 800;
+  text-decoration: none;
 }
 
 .listing-preview,
@@ -712,6 +825,7 @@ textarea {
   }
 
   .hero,
+  .realtor-hero-content,
   .about-section,
   .overview-section,
   .outdoor-section,
@@ -727,7 +841,8 @@ textarea {
 
   .category-grid,
   .quick-facts,
-  .feature-grid {
+  .feature-grid,
+  .strength-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -772,6 +887,8 @@ textarea {
   .category-grid,
   .quick-facts,
   .feature-grid,
+  .strength-grid,
+  .featured-grid,
   .gallery-grid {
     grid-template-columns: 1fr;
   }
