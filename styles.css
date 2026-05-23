@@ -167,6 +167,12 @@ a {
     url("../assets/1220-calendula-front.jpeg") center / cover;
 }
 
+.listing-hero .little-elm-hero {
+  background:
+    linear-gradient(90deg, rgba(11, 24, 18, 0.86), rgba(11, 24, 18, 0.44) 52%, rgba(11, 24, 18, 0.14)),
+    url("../assets/1401-little-elm-1.jpg") center / cover;
+}
+
 .hero-content {
   max-width: 760px;
 }
